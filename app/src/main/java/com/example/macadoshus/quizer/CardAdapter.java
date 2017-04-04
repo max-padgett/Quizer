@@ -10,9 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Macadoshus on 4/1/2017.
- */
+
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
 
@@ -42,7 +40,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
                 i.putExtra("Card_Title", items.getTitle());
                 i.putExtra("position", position);
                 v.getContext().startActivity(i);
-
             }
 
         });

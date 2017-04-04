@@ -2,9 +2,7 @@ package com.example.macadoshus.quizer;
 
 import java.util.ArrayList;
 
-/**
- * Created by Macadoshus on 3/30/2017.
- */
+
 
 public class CardInfo {
 

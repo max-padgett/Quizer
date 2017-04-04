@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -82,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
     public void setCards(){
         Intent i = getIntent();
         if(i.getExtras() != null){
-            String s = i.getExtras().getString("Card_Title");
-            cards.set(i.getExtras().getInt("position", 0), new CardInfo(s));
-            adapter.notifyDataSetChanged();
+            String s = i.getStringExtra("Card_Title");
+            cards.set(i.getIntExtra("position", 0), new CardInfo(s));
+            Log.d("SomeStuff", String.valueOf(i.getIntExtra("position", 0)));
         }
     }
 

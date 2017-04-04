@@ -5,9 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
-/**
- * Created by Macadoshus on 4/3/2017.
- */
 
 public class JoinRoomActivity extends AppCompatActivity {
 
