@@ -1,6 +1,7 @@
 package com.example.macadoshus.quizer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,9 +31,21 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         final CardInfo items = listItems.get(position);
         holder.title.setText(items.getTitle());
+
+        holder.title.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), EditCards.class);
+                i.putExtra("Card_Title", items.getTitle());
+                i.putExtra("position", position);
+                v.getContext().startActivity(i);
+
+            }
+
+        });
     }
 
     @Override

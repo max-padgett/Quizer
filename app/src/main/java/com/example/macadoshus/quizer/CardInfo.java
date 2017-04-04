@@ -12,7 +12,7 @@ public class CardInfo {
         private ArrayList<String> questions = new ArrayList<>();
 
         CardInfo(){
-            title = "";
+            title = "A Card";
         }
         CardInfo(String title){
             this.title = title;

@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="cardColor">#FF9</color>
+    <color name="toolBarColor">#331194ff</color>
+    <color name="EditText">#3e111a4f</color>
 </resources>

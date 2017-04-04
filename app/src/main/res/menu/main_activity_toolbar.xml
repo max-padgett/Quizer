@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/create_room"
+        android:id="@+id/create_room"/>
+    <item android:title="@string/join_room"
+        android:id="@+id/join_room"
+        app:showAsAction="ifRoom"/>
+    <item android:title="@string/quit"
+        android:id="@+id/quit"/>
+</menu>
