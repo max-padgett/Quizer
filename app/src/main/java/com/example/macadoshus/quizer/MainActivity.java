@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        setCards();
 
         adapter = new CardAdapter(cards, this);
         recyclerView.setAdapter(adapter);
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(final View v) {
-            cards.add(new CardInfo(""));
+            cards.add(new CardInfo("Stuff"));
             adapter.notifyDataSetChanged();
         }
     };
@@ -71,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             case R.id.create_room:
+                Intent j = new Intent(this, CreateRoomActivity.class);
+                startActivity(j);
                 break;
             case R.id.quit:
                 break;
@@ -79,14 +80,32 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    protected void onNewIntent(Intent intent){
+        super.onNewIntent(intent);
+        setIntent(intent);
+        if(intent.getExtras() != null){
+            String s = intent.getStringExtra("Card_Title");
+            cards.set(intent.getIntExtra("position", 0), new CardInfo(s));
+            adapter.notifyDataSetChanged();
+            Log.d("SomeStuff", String.valueOf(intent.getIntExtra("position", 0)));
+        }
+        else
+            Log.d("Nothing", "Nothing there");
 
-    public void setCards(){
+        adapter.notifyDataSetChanged();
+    }
+
+
+    /*public void setCards(){
         Intent i = getIntent();
         if(i.getExtras() != null){
             String s = i.getStringExtra("Card_Title");
             cards.set(i.getIntExtra("position", 0), new CardInfo(s));
+            adapter.notifyDataSetChanged();
             Log.d("SomeStuff", String.valueOf(i.getIntExtra("position", 0)));
         }
-    }
+        else
+            Log.d("Nothing", "Nothing there");
+    }*/
 
 }

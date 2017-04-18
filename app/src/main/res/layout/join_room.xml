@@ -25,6 +25,7 @@
         android:layout_centerVertical="true"/>
 
     <Button
+        android:id="@+id/join_room_button"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_below="@+id/join_room_edit"

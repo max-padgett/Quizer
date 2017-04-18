@@ -57,7 +57,7 @@ public class EditCards extends AppCompatActivity {
             case R.id.save:
 
                 Intent i = new Intent(this, MainActivity.class);
-                i.putExtra("Card_Title", Title.getText());
+                i.putExtra("Card_Title", Title.getText().toString());
                 i.putExtra("position", getIntent().getIntExtra("position", 0));
                 i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 startActivity(i);
