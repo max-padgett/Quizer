@@ -13,6 +13,15 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         />
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/rand_code"
+        android:text="Enter the Code below to access the room:"/>
+    <TextView
+        android:id="@+id/rand_code"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </RelativeLayout>

@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".EditCards" />
         <activity android:name=".JoinRoomActivity"/>
+        <activity android:name=".CreateRoomActivity"/>
     </application>
 
 </manifest>
